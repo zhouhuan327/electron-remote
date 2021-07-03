@@ -1,0 +1,25 @@
+{
+  "name": "electron-remote",
+  "version": "1.0.0",
+  "main": "app/main/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run start:render\" \"wait-on http://localhost:3000 && npm run start:main\" ",
+    "start:main": "electron .",
+    "start:render": "cd app/render/src/main && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "electron": "^7.1.8",
+    "electron-rebuild": "^1.8.8",
+    "wait-on": "^3.3.0"
+  },
+  "dependencies": {
+    "about-window": "^1.13.2",
+    "electron-about-window": "^1.13.2",
+    "electron-is-dev": "^1.1.0",
+    "robotjs": "^0.6.0",
+    "vkey": "^1.0.1",
+    "ws": "^7.2.1"
+  }
+}
